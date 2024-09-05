@@ -285,7 +285,7 @@ int ParsingPLCCommand(char *cmdStr, PLCCommand *cmd)
     char buff[3];
     int stNumber, regNumber;
     int32_t val;
-    int length = sscanf(cmdStr,"%2s%d,%d,%d",buff,&stNumber,&regNumber,&val);
+    int length = sscanf(cmdStr,"%2s%d,%d,%ld",buff,&stNumber,&regNumber,&val);
     if(length >= 3)
     {
         if(strcmp(buff,"SM")== 0)
